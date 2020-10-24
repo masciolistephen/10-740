@@ -94,14 +94,16 @@ The DHT11 sensor has three pins, a digital output data pin, a VCC pin for power,
 The temperature and humidity are relatively static phenomena, and the DHT11 sensor is limited to 1 measurement a second, making it appropriate for this application. 
 
 ### Signal Conditioning and Processing
-Describe the signal conditioning and processing procedures
+In order to deal with ripples and waves caused by the introduction of water into the container we used an moving average process with a sample window.  The window we chose to use was one sample every 0.5 seconds for a total of 2.5 seconds.  We then averaged the water level change within that window to return the change in water level that was published to open chirp.  
+
+
 ## Experiments and Results
 
 In order to test the water level sensor and ensure it was accurately measuring the current level we ran seperate tests to calibrate our sensors.  We found that the sensor does not behave linearly to rising water and begins to act logarithmically as the water reached its highest levels.  Below we have the trasfer functions we used for each of our sensors:
 
-INSERT TRANSFER FUNCTIONS
 
 <img src="https://i.gyazo.com/8c425f62bf8ce916518a152af69eeb00.png" alt="Image from Gyazo" width="175"/></a>
+
 
 After we had calibrated our sensors we began to look at how we would sample the data and convert it into a change in water level.  When conducting out experiments we noticed that the sensor took time to settle down and get an accurate measurement due to ripples in the water.  This led us to use a moving average of the data in order to eleiminate the potential problems caused from these effects.  
 
