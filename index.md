@@ -68,7 +68,7 @@ This water level sensor is measuring a relatively static phenomena, and it is un
 Early into testing out our water level sensors, we realized that quality and behavior varied between both of our sensors, as the output voltage given the same water level would differ between our sensors. This could be due to the difference in the conductivity of the water used. Therefore, we each ran tests individually to determine the corresponding voltage given a known water level. For example, Figure 2 is the results of three trials of raising the water level by 0.5 cm about every minute. Fitting a logarithmic curve to the data resulted in a transfer function converting voltage to water height. This is completed for both sensors, yielding different transfer functions.
 
 <img src="https://i.gyazo.com/420211b2c586f00f310eafaef5739518.png" alt="Image from Gyazo" width="600"/></a>
-<img src="https://gyazo.com/635843e21971417348ee449b35b45451.png" alt="Image from Gyazo" width="600"/></a>
+
 
 Figure 2: Logarithmic relationship between voltage and water height characterized during calibration
 
@@ -104,7 +104,7 @@ In order to test the water level sensor and ensure it was accurately measuring t
 
 
 <img src="https://i.gyazo.com/8c425f62bf8ce916518a152af69eeb00.png" alt="Image from Gyazo" width="175"/></a>
-
+<img src="https://gyazo.com/635843e21971417348ee449b35b45451.png" alt="Image from Gyazo" width="250"/></a>
 
 After we had calibrated our sensors we began to look at how we would sample the data and convert it into a change in water level.  When conducting out experiments we noticed that the sensor took time to settle down and get an accurate measurement due to ripples in the water.  This led us to use a moving average of the data in order to eleiminate the potential problems caused from these effects.  
 
